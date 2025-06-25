@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini E-commerce</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>🛍️ My Mini Shop</h1>
+
+    <!-- Admin Controls -->
+    <div id="adminControls">
+      <button id="loginBtn">Admin Login</button>
+    </div>
+
+    <!-- Login Form (hidden initially) -->
+    <div id="loginForm" class="admin-box hidden">
+      <input type="password" id="adminPass" placeholder="Enter Admin Password" />
+      <button id="submitLogin">Login</button>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="admin-box hidden">
+      <h2>Add New Product</h2>
+      <form id="productForm">
+        <input type="text" id="name" placeholder="Product Name" required />
+        <input type="number" id="price" placeholder="Price (₹)" required />
+        <input type="text" id="desc" placeholder="Description" required />
+        <input type="file" id="image" accept="image/*" required />
+        <button type="submit">Add Product</button>
+      </form>
+      <button id="logoutBtn">Logout</button>
+    </div>
+
+    <!-- Product List -->
+    <div class="product-section">
+      <h2>Available Products</h2>
+      <div id="products" class="product-list"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
